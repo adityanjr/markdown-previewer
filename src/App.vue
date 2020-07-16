@@ -14,6 +14,7 @@
         </b-col>
         <b-col>
           <h1>Preview</h1>
+          <vue-markdown class="info" :source="text">{{ text }}</vue-markdown>
         </b-col>
       </b-row>
     </b-container>
@@ -21,14 +22,15 @@
 </template>
 
 <script>
+import VueMarkdown from "vue-markdown";
 export default {
   name: "App",
-  components: {},
+  components: { VueMarkdown },
   data() {
     return {
-      text: ""
+      text: "",
     };
-  }
+  },
 };
 </script>
 <style scoped>
