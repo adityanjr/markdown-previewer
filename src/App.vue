@@ -28,9 +28,9 @@ export default {
   components: { VueMarkdown },
   data() {
     return {
-      text: "",
+      text: ""
     };
-  },
+  }
 };
 </script>
 <style scoped>
