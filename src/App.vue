@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <b-container class="container">
+      <b-row>
+        <b-col>
+          <h1>Markdown</h1>
+          <b-form-textarea
+            class="info"
+            id="textarea"
+            v-model="text"
+            placeholder="Write something..."
+            rows="15"
+          ></b-form-textarea>
+        </b-col>
+        <b-col>
+          <h1>Preview</h1>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name: "App",
+  components: {},
+  data() {
+    return {
+      text: ""
+    };
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.container {
+  margin-top: 40px;
+}
+.info {
+  margin-top: 30px;
 }
 </style>
